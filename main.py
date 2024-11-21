@@ -3,9 +3,7 @@ Bibliotecas para instalar:
 pip install numpy==1.24.3 sentence-transformers spacy
 python -m spacy download pt_core_news_lg
 
-a. Foram aplicados word embeddings e técnicas relacionadas?
-similaridade (SPACY) -> SIM
-sistemas de recomendação ou busca -> Busca implementada
+Foram aplicados:
 análise de tópicos
 identificação de entidades
 """
@@ -18,13 +16,10 @@ import pandas as pd
 import spacy
 from gensim.models import LdaModel
 from nltk.tokenize import word_tokenize
-from sentence_transformers import SentenceTransformer
 from spacy.tokens import Span
 
 # Carregar o modelo de linguagem do spaCy
 nlp = spacy.load('pt_core_news_lg')
-# Carregar modelo SBERT
-sbert_model = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')
 # Carregar nltk
 nltk.download('punkt')
 
